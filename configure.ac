@@ -89,6 +89,12 @@ PKG_CHECK_MODULES(UHD, uhd >= 003.007.000,
      AX_EXT],
     [AM_CONDITIONAL(HAVE_UHD, false)])
 
+PKG_CHECK_MODULES(BLADERF, libbladeRF,
+    [AC_DEFINE(HAVE_BLADERF, 1, [Define if libbladeRF found.])
+     AM_CONDITIONAL(HAVE_BLADERF, true)
+     AX_EXT],
+    [AM_CONDITIONAL(HAVE_BLADERF, false)])
+
 # Prepends -lreadline to LIBS and defines HAVE_LIBREADLINE in config.h
 #AC_CHECK_LIB(readline, readline)
 
@@ -109,6 +115,7 @@ AC_CONFIG_FILES([\
     SMS/Makefile \
     TransceiverRAD1/Makefile \
     TransceiverUHD/Makefile \
+    TransceiverBLADERF/Makefile \
     TRXManager/Makefile \
     CLI/Makefile \
     NodeManager/Makefile \

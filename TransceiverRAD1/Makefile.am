@@ -12,6 +12,7 @@
 # See the LEGAL file in the main directory for details.
 
 if !HAVE_UHD
+if !HAVE_BLADERF
 include $(top_srcdir)/Makefile.common
 
 DESTDIR = 
@@ -113,4 +114,5 @@ install: transceiver
 	install transceiver "$(DESTDIR)/OpenBTS/"
 	install ezusb.ihx "$(DESTDIR)/OpenBTS/"
 	install fpga.rbf "$(DESTDIR)/OpenBTS/"
+endif
 endif

@@ -29,6 +29,7 @@ SUBDIRS = \
 	SMS \
 	TransceiverRAD1 \
 	TransceiverUHD \
+	TransceiverBLADERF \
 	TRXManager \
 	Control \
 	NodeManager \
@@ -47,5 +48,6 @@ install: all
 	$(MAKE) -C ./apps install
 	$(MAKE) -C ./TransceiverRAD1 install
 	$(MAKE) -C ./TransceiverUHD install
+	$(MAKE) -C ./TransceiverBLADERF install
 
 FORCE:

@@ -75,7 +75,8 @@ RPData *SMS::hex2rpdata(const char *hexstring)
 
 	BitVector RPDUbits(strlen(hexstring)*4);
 	if (!RPDUbits.unhex(hexstring)) {
-		return false;
+        return NULL;
+		//return false;
 	}
 	LOG(DEBUG) << "SMS RPDU bits: " << RPDUbits;
 

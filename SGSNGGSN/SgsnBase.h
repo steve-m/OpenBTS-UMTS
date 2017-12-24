@@ -30,8 +30,7 @@ extern bool sgsnDebug();
 //#define GGSNLOG1(level,who,stuff) if (IS_LOG_LEVEL(level)||SGSN::sgsnDebug()) _LOG(level)<<who<<timestr()<<","<<stuff;
 #define GGSNLOG1(level,who,stuff) if (IS_LOG_LEVEL(level)||SGSN::sgsnDebug()) _LOG(level)<<who<<stuff;
 // Normal log plus put it in the ggsn.log file.
-#define GGSNLOG2(level,who,stuff) GGSNLOG1(level,who,stuff); \
-		if (SGSN::sgsnDebug()) {MGLOG(who<<stuff);}
+#define GGSNLOG2(level,who,stuff) GGSNLOG1(level,who,stuff);
 #define GGSNLOG(stuff) GGSNLOG2(INFO,"SGSN:",stuff)
 #define LLCDEBUG(stuff)   GGSNLOG1(DEBUG,"LLC:",stuff)
 #define SNDCPDEBUG(stuff) GGSNLOG1(DEBUG,"SNDCP:",stuff)

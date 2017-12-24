@@ -4856,7 +4856,7 @@ regen: $O/$(KEYFILE)
 
 $O/$(KEYFILE):
 	-mkdir $O
-	cd $O && asn1c -fcompound-names -pdu=auto -gen-PER ../rrc.asn1
+	cd $O && asn1c -fcompound-names -pdu=auto -fwide-types -gen-PER ../rrc.asn1
 
 
 Makefile: ./sample.makefile.regen ./rrc.asn1
