@@ -39,8 +39,8 @@ bladeRFDevice::bladeRFDevice(double rate)
 	: tx_gain_min(0.0), tx_gain_max(0.0),
 	  rx_gain_min(0.0), rx_gain_max(0.0),
 	  tx_rate(rate), rx_rate(rate), tx_freq(0.0), rx_freq(0.0),
-	  started(false), aligned(false), rx_pkt_cnt(0), drop_cnt(0),
-	  prev_ts(0), ts_offset(0), rx_buffer(NULL), firstGoodTXDone(false)
+	  started(false), aligned(false), firstGoodTXDone(false), rx_pkt_cnt(0), drop_cnt(0),
+	  prev_ts(0), ts_offset(0), rx_buffer(NULL)
 {
 }
 
